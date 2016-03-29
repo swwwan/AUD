@@ -1,0 +1,26 @@
+<div class='city-select'>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      所在省份：
+    </div>
+    <select class='et-form-control' ng-model='province' ng-options=' province.area_name for province in provinces'>
+      <option value=''>--省--</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      所在城市：
+    </div>
+    <select class=' ' ng-model='city' ng-options='city.area_name for city in filteredCities'>
+      <option value=''>--市--</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      所在区县：
+    </div>
+    <select class=' ' ng-model='county' ng-options='county.area_name for county in filteredCountys'>
+      <option value=''>--县--</option>
+    </select>
+  </label>
+</div>
