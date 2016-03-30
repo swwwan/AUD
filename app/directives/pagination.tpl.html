@@ -1,0 +1,19 @@
+<div class="row" ng-hide="count===0">
+  <div class="col-sm-12 text-center">
+    <nav>
+      <ul class="pagination">
+        <li class="paginate_button previous " ng-class="pagecurrent ===1 ? 'not-active' : 'cursor_hand'" >
+          <a aria-label="Previous" ng-click= "filterpage({pagecurrent:pagecurrent-1,limit:limit})" >上一页</a>
+        </li>
+        <li class="paginate_button cursor_hand"
+          ng-class="n===pagecurrent ? 'active' : null"
+          ng-repeat="n in [] | range:count/limit">
+          <a ng-click= "filterpage({pagecurrent:n,limit:limit})">{{n}}</a>
+        </li>
+        <li class="paginate_button next"  ng-class="pagecurrent >=count/limit ? 'not-active' : 'cursor_hand'" >
+          <a ng-click= "filterpage({pagecurrent:pagecurrent+1,limit:limit})">下一页</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
